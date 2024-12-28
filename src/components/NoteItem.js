@@ -21,15 +21,6 @@ const NoteItem = (props) => {
           <button
             className="btn btn-primary mx-2"
             onClick={() => {
-              props.addNote(note._id);
-            }}
-          >
-            Add Note
-          </button>
-
-          <button
-            className="btn btn-primary mx-2"
-            onClick={() => {
               props.editNote(note._id);
             }}
           >
