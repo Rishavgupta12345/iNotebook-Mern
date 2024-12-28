@@ -40,8 +40,12 @@ const NoteState = (props) => {
 
   //Edit a note
   const editNote = (_id) => {
-    const newNotes = notes.filter((note) => note._id !== _id);
-    setNotes(newNotes);
+    for (let i = 0; i < notes.length; i++) {
+      if (notes[i]._id === _id) {
+        notes[i].title = "updated title";
+        notes[i].description = "updated description";
+      }
+    }
   };
 
   return (
