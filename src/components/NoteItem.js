@@ -1,7 +1,7 @@
 import React from "react";
 
 const NoteItem = (props) => {
-  const { note } = props;
+  const { note,updateNote } = props;
   return (
     <div className="col-md-4">
       <div className="card my-3">
@@ -20,9 +20,7 @@ const NoteItem = (props) => {
 
           <button
             className="btn btn-primary mx-2"
-            onClick={() => {
-              props.editNote(note._id);
-            }}
+            onClick={() => {updateNote(note)}}
           >
             Edit
           </button>
